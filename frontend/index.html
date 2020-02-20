@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ScrambleShake</title>
+    <link rel='stylesheet' href='stylesheet/styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class='page-font' id='head-runner'>
+        <header class='page-header' id='username'> 
+            <div id='greet-user'>
+                <h2>Hi Ya</h2>
+            </div>
+            <div id='welcome-info'>
+                <h2>Welcome to ScrambleShake! Get ready to sCrAmBle & sHaKe~ </h2>
+            </div>
+        </header> 
+    </div>
+    <div id='sign-in-form'>
+        <div id='player-1' style='margin-right: 70%;'>
+            <form id='user1-form' autocomplete="off">
+                <label class='page-font userform'  style='font-size: 130%'>Player_1 Name :</label><br>
+                <input class='page-font userform' id='user1name' type='text'>
+                <br>
+                <label class='page-font userform' style='font-size: 130%'>Player_1 Email:</label><br>
+                <input class='page-font userform' id='user1email' type='text'>
+                <br>
+                <button class='page-font userform ready' id='user1ready' type='submit'>Ready</button>
+            </form>
+        </div>
+        <div id='player-2'>
+            <form id='user2-form' autocomplete="off">
+                <label class='page-font userform'  style='font-size: 130%'>Player_2 Name :</label><br>
+                <input class='page-font userform' id='user2name' type='text'>
+                <br>
+                <label class='page-font userform' style='font-size: 130%'>Player_2 Email:</label><br>
+                <input class='page-font userform' id='user2email' type='text'>
+                <br>
+                <button class='page-font userform ready' id='user2ready' type='submit'>Ready</button>
+            </form>
+        </div>
+    </div>
+    <div class= 'game-rules' id='ScrambleShake-rules'>
+        <p id='rules'>
+            Here's how it's gonna be:<br>
+            ☀︎ Player_1 goes first. <em>ALWAYS</em><br>
+            ☀︎ Don't think it's a <em>real</em> English word? CHALLENGE <br> 
+                ☞ if it IS a valid word, the challenger forfeits a move.<br>
+                ☞ if it IS NOT a valid word, current player forfeits a move.<br>
+        </p>
+    </div>
+    <button class='page-font userform hidden' id='submit-user' style='font-size: 130%'>ScrambleShake</button>
+    <div id="game-page" class="hidden">
+        <div id="main-content">
+            <div class="deck-column" id="deck-column1">
+                <h2 id="user-1-points"></h2>
+                <div id="user1-deck" class="deck"></div>
+                <button class="action show-letters" id="show1">Show letters</button>
+                <button class="action shuffle" id="shuffle1">Shuffle</button>
+                <button class="action reset-letters" id="reset1">Reset letters</button>
+                <button class="action submit" id="play1">Play Word</button>
+            </div>
+
+            <div class="board-column">
+                <div id="board-container"></div>
+                <div class="end-game">
+                    <button id="end-game">Fertig</button>
+                </div>
+            </div>
+
+            <div class="deck-column" id="deck-column2">
+                <h2 id="user-2-points"></h2>
+                <div id="user2-deck" class="deck"></div>
+                <button class="action show-letters" id="show0">Show letters</button>
+                <button class="action shuffle" id="shuffle0">Shuffle</button>
+                <button class="action reset-letters" id="reset0">Reset letters</button>
+                <button class="action submit" id="play0">Play Word</button>
+            </div>
+        </div>
+    </div>
+    <script src="board.js"></script>
+    <script src="login.js"></script>
+    <script src="scoreboard.js"></script>
+    <script src='index.js'></script>
+</body>
+</html>
